@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Distro.Seedworks.Infrastructure.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Distro.Seedworks.Infrastructure.DataAccess
 {
     public abstract class RepositoryBase<T> : IRepository<T>
-        where T : class, IDatabaseEntity
+        where T : class, IDatabaseEntity, IAggregateRoot
     {
         protected DbContext Context { get; set; }
         public DbSet<T> _table { get; set; }
