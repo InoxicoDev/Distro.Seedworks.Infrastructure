@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Transactions;
 
 namespace Distro.Seedworks.Infrastructure.DataAccess
 {
@@ -8,7 +7,6 @@ namespace Distro.Seedworks.Infrastructure.DataAccess
         where T : DbContext
     {
         protected T _context;
-        private TransactionScope _transaction;
 
         public DbTestsBase(string connectionStringName = "DefaultConnection")
         {
@@ -18,19 +16,14 @@ namespace Distro.Seedworks.Infrastructure.DataAccess
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-
-
             var optionsBuilder = new DbContextOptionsBuilder<T>();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString(connectionStringName));
 
-            _context = (T)Activator.CreateInstance(typeof(T), optionsBuilder.Options);
-
-            _transaction = new TransactionScope(TransactionScopeOption.RequiresNew, TimeSpan.MaxValue);
+            _context = (T)Activator.CreateInstance(typeof(T), optionsBuilder.Options);            
         }
 
         public void Dispose()
-        {
-            _transaction.Dispose();
+        {            
         }
     }
 }
