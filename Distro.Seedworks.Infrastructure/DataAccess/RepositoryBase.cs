@@ -1,4 +1,4 @@
-﻿using Distro.Seedworks.Infrastructure.Domain;
+﻿using Distro.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace Distro.Seedworks.Infrastructure.DataAccess
