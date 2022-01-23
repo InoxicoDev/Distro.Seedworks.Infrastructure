@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distro.Seedworks.Infrastructure", "Distro.Seedworks.Infrastructure\Distro.Seedworks.Infrastructure.csproj", "{35CE07F7-0B49-4D88-ABD8-40B3767F5806}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distro.Domain.Common", "..\Distro.Domain.Common\Distro.Domain.Common\Distro.Domain.Common.csproj", "{8FB78F8D-4601-494E-BE20-5987F6E13D7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{35CE07F7-0B49-4D88-ABD8-40B3767F5806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35CE07F7-0B49-4D88-ABD8-40B3767F5806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35CE07F7-0B49-4D88-ABD8-40B3767F5806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB78F8D-4601-494E-BE20-5987F6E13D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB78F8D-4601-494E-BE20-5987F6E13D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB78F8D-4601-494E-BE20-5987F6E13D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB78F8D-4601-494E-BE20-5987F6E13D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
